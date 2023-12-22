@@ -1,8 +1,8 @@
 <?php
 // database.php
 $dbhost = 'localhost';
-$dbuser = 'perry';
-$dbpass = '@Perry130386';
+$dbuser = '*****'; // isi dengan username phpmyadmin
+$dbpass = '*****'; // isi dengan password phpmyadmin
 $dbname = 'data_pelanggan_estehcimone';
 
 // Menciptakan koneksi
