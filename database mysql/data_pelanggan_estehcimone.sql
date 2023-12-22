@@ -35,13 +35,6 @@ CREATE TABLE `database_pelanggan` (
   `nama_pelanggan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `database_pelanggan`
---
-
-INSERT INTO `database_pelanggan` (`id_pelanggan`, `username`, `password`, `created_at`, `nama_pelanggan`) VALUES
-(1, 'perry.roy@gmail.com', '$2y$10$AIBtHxdpb1mVeMoWIm382.I8pLZKbEA4bGAM0IkhLKbNd7zlE9GVi', '2023-12-19 13:17:13', 'Perry'),
-(2, 'perry.roy.bowo86@gmail.com', '$2y$10$QGEMlIGw/AFBdjLvrxbBX..RZMtwp3HL8dQtc4VN.R9fauBgXLw4G', '2023-12-19 08:05:13', 'Pery RoyBowo');
 
 -- --------------------------------------------------------
 
@@ -57,12 +50,6 @@ CREATE TABLE `dukung_kami` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `dukung_kami`
---
-
-INSERT INTO `dukung_kami` (`nama_lengkap`, `email`, `no_telepon`, `cerita_momen`, `created_at`) VALUES
-('Pery RoyBowo', 'perry@gmail.com', '08525859100', 'Terbaik', '2023-12-20 05:52:12');
 
 -- --------------------------------------------------------
 
@@ -76,21 +63,6 @@ CREATE TABLE `produk` (
   `ukuran_produk` varchar(7) NOT NULL,
   `harga_produk` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `produk`
---
-
-INSERT INTO `produk` (`id_produk`, `nama_produk`, `ukuran_produk`, `harga_produk`) VALUES
-(101, 'Es Teh Cimone Origin', 'Small', 5000),
-(102, 'Es Teh Cimone Origin', 'Reguler', 7500),
-(103, 'Es Teh Cimone Origin', 'Large', 10000),
-(201, 'Es Teh Cimone Lemon', 'Small', 6000),
-(202, 'Es Teh Cimone Lemon', 'Reguler', 9000),
-(203, 'Es Teh Cimone Lemon', 'Large', 12000),
-(301, 'Es Teh Cimone Oolong', 'Small', 6000),
-(302, 'Es Teh Cimone Oolong', 'Reguler', 9000),
-(303, 'Es Teh Cimone Oolong', 'Large', 12000);
 
 --
 -- Indexes for dumped tables
@@ -109,12 +81,6 @@ ALTER TABLE `database_pelanggan`
 --
 ALTER TABLE `dukung_kami`
   ADD PRIMARY KEY (`email`);
-
---
--- Indeks untuk tabel `produk`
---
-ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
